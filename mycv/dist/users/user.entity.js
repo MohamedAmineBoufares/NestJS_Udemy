@@ -12,6 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const typeorm_1 = require("typeorm");
 let User = class User {
+    logInsert() {
+        console.log('Inserted User with id', this.id);
+    }
+    logUpdate() {
+        console.log('Updated User with id', this.id);
+    }
+    logRemove() {
+        console.log('Removeded User with id', this.id);
+    }
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
@@ -25,6 +34,24 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
+__decorate([
+    (0, typeorm_1.AfterInsert)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logInsert", null);
+__decorate([
+    (0, typeorm_1.AfterUpdate)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logUpdate", null);
+__decorate([
+    (0, typeorm_1.AfterRemove)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logRemove", null);
 User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);
