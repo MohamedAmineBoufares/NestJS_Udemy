@@ -18,7 +18,7 @@ export class User {
   @Column()
   email: string;
 
-  @Column()
+  @Column({ default: true })
   admin: boolean;
 
   @Column()
