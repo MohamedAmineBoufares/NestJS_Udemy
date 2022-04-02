@@ -57,7 +57,7 @@ To test the API, I was using Postman. We have 2 endpoints:
 
 ## JWT payload
 
-to see the JWT body, please [click here](https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhhNGIzYzgxLWY0NDQtNGM4MS04ZTEwLWIxYTc4YzllMmQ2ZCIsImVtYWlsIjoiYW1pbmVAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJNb2hhbWVkIEFtaW5lIEJvdWZhcmVzIiwicm9sZSI6MCwiaWF0IjoxNjQ4ODk1NTEyLCJleHAiOjE2NDg4OTkxMTJ9.t_0sc2QScXceY7e7ZK9Y9ruyp7ePOKnr8FA-af9ku7o).
+To see the JWT body, please [click here](https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhhNGIzYzgxLWY0NDQtNGM4MS04ZTEwLWIxYTc4YzllMmQ2ZCIsImVtYWlsIjoiYW1pbmVAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJNb2hhbWVkIEFtaW5lIEJvdWZhcmVzIiwicm9sZSI6MCwiaWF0IjoxNjQ4ODk1NTEyLCJleHAiOjE2NDg4OTkxMTJ9.t_0sc2QScXceY7e7ZK9Y9ruyp7ePOKnr8FA-af9ku7o).
 
 ## Author
 
