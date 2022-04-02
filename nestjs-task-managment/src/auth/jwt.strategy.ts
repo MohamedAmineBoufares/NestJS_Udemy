@@ -7,10 +7,10 @@ import { User } from './user.entity';
 import { UsersRepository } from './users.repository';
 
 @Injectable()
-export class JwtStragtegy extends PassportStrategy(Strategy) {
+export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
     @InjectRepository(UsersRepository)
-    private usersRepositiry: UsersRepository,
+    private usersRepository: UsersRepository,
   ) {
     super({
       secretOrKey: 'topSecret51',
@@ -20,8 +20,7 @@ export class JwtStragtegy extends PassportStrategy(Strategy) {
 
   async validate(payload: JwtPayload): Promise<User> {
     const { username } = payload;
-
-    const user: User = await this.usersRepositiry.findOne({ username });
+    const user: User = await this.usersRepository.findOne({ username });
 
     if (!user) {
       throw new UnauthorizedException();
