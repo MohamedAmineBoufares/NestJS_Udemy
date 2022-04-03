@@ -14,6 +14,6 @@ export class User {
   @Column()
   password: string;
 
-  @Column()
-  role: number = 0; // By default is a super admin
+  @Column({ default: 0 })
+  role: number;
 }
