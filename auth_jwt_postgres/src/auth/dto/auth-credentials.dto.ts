@@ -30,7 +30,7 @@ export class SignUpDto {
   @IsNumber()
   @Min(0)
   @Max(4)
-  role: number;
+  role: number = 0;
 }
 
 export class LogInDto {
