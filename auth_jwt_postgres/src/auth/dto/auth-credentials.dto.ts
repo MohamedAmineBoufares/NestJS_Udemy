@@ -30,7 +30,7 @@ export class SignUpDto {
   @IsNumber()
   @Min(0)
   @Max(4)
-  role: number = 0;
+  role: number = 0; // A user is by default a super admin
 }
 
 export class LogInDto {
