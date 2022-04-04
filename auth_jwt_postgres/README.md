@@ -41,13 +41,17 @@ To test the API, I was using Postman. We have 2 endpoints:
 
 1. **/auth/signup**: This is the endpoint responsible for creating a new account, it accepts:
 
-- "email": "email@email.com" (_Yes there's an email validation here_)
+- "email": "email@email.com" (_Yes there's an email validation here_).
 
-- "password": "Password123456789" (_Yes there's a password validation here_)
+- "password": "Password123456789" (_Yes there's a password validation here_).
+
+- "fullName": "Name Lastname"
+
+- "Role": 0 | 1 | 3 | 4, if you leave it empty, by default, it will be asseigned a value of 0.
 
 - A 201 created response will be sent back, with nothing in the response body.
 
-2. **/auth/login**: This is the endpoint responsible for logging into an existing account, it accepts:
+1. **/auth/login**: This is the endpoint responsible for logging into an existing account, it accepts:
 
 - "email": "email@email.com"
 
