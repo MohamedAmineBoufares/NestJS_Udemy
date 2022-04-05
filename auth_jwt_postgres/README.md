@@ -51,7 +51,7 @@ To test the API, I was using Postman. We have 2 endpoints:
 
 - A 201 created response will be sent back, with nothing in the response body.
 
-1. **/auth/login**: This is the endpoint responsible for logging into an existing account, it accepts:
+2. **/auth/login**: This is the endpoint responsible for logging into an existing account, it accepts:
 
 - "email": "email@email.com"
 
