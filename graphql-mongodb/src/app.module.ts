@@ -3,9 +3,9 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { LessonModule } from './lesson/lesson.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Lesson } from './lesson/lesson.entity';
+import { Lessons } from './lesson/lesson.entity';
 import { StudentModule } from './student/student.module';
-import { Student } from './student/student.entity';
+import { Students } from './student/student.entity';
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { Student } from './student/student.entity';
       url: 'mongodb+srv://Admin:Admin123@cluster0.bceul.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
       synchronize: true,
       useUnifiedTopology: true,
-      entities: [Lesson, Student],
+      entities: [Lessons, Students],
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
