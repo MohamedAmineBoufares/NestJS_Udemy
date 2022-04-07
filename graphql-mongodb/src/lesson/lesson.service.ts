@@ -13,22 +13,33 @@ export class LessonService {
   ) {}
 
   async createLesson(createLessonInput: CreateLessonInput): Promise<Lessons> {
-    const { name, startDate, endDate } = createLessonInput;
+    const { name, startDate, endDate, students } = createLessonInput;
     const lesson = this.lessonRepository.create({
       id: uuid(),
       name,
       startDate,
       endDate,
+      students,
     });
 
     return this.lessonRepository.save(lesson);
   }
 
   async getLesson(id: string): Promise<Lessons> {
-    return this.lessonRepository.findOneBy({ id });
+    return this.lessonRepository.findOne({ id });
   }
 
   async getLessons(): Promise<Lessons[]> {
     return this.lessonRepository.find();
+  }
+
+  async assignStudentToLesson(
+    lessonId: string,
+    studentIds: string[],
+  ): Promise<Lessons> {
+    const lesson = await this.lessonRepository.findOne({ id: lessonId });
+    lesson.students = [...lesson.students, ...studentIds];
+
+    return this.lessonRepository.save(lesson);
   }
 }
